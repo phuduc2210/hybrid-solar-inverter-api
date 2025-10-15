@@ -5,6 +5,7 @@ import userRoutes from "./routes/users.js";
 import updateRoutes from "./routes/updateRoutes.js";
 import downloadRoutes from "./routes/downloadRoutes.js";
 import logInfoRoutes from "./routes/logInfoRoutes.js";
+import settingRoutes from "./routes/settingRoutes.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import path from "path";
@@ -56,6 +57,7 @@ app.use("/api/users", userRoutes);
 app.use("/api/update", updateRoutes);
 app.use("/api/file", downloadRoutes);
 app.use("/api/devices", logInfoRoutes);
+app.use("/api/settings", settingRoutes);
 
 app.listen(port, () => {
   console.log("Connected to Backend server!");
